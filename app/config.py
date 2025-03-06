@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Configuration settings for the nutrition assistant
+Configuration settings
 """
 from pydantic import BaseModel, Field
 from typing import Optional, List

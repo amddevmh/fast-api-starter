@@ -15,7 +15,7 @@ load_dotenv(dotenv_path=os.path.join(app_dir, '.env'))
 
 # MongoDB Atlas connection settings from environment variables
 MONGODB_URI = os.getenv("MONGODB_URI")
-DATABASE_NAME = os.getenv("MONGODB_DATABASE", "nutrition_assistant")
+DATABASE_NAME = os.getenv("MONGODB_DATABASE")
 
 # MongoDB client with server API version 1
 client = AsyncIOMotorClient(MONGODB_URI, server_api=ServerApi('1'))

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Authentication routes for the nutrition assistant
+Authentication routes
 """
 from fastapi import APIRouter, Depends, HTTPException, status, Header
 from datetime import timedelta

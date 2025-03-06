@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 """
-Authentication middleware for the nutrition assistant
+Authentication middleware
 """
-from typing import Optional, Callable, Awaitable
+from typing import Optional
 from fastapi import Request, HTTPException, status, Depends
-from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
-
 from app.config import settings
 from app.models.user import User
 from app.auth.security import verify_token
