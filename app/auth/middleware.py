@@ -25,11 +25,14 @@ async def verify_user_middleware(request: Request) -> None:
     If any step fails, an appropriate HTTP exception is raised
     """
     # Skip auth for certain paths
+    # Documentation paths
     if request.url.path in [
+        "/docs",
+        "/redoc",
+        "/openapi.json",
+        "/health",
+        # API paths that don't need auth
         f"{settings.API_PREFIX}/auth/test-token",
-        f"{settings.API_PREFIX}/docs",
-        f"{settings.API_PREFIX}/redoc",
-        f"{settings.API_PREFIX}/openapi.json",
     ]:
         return
         
